@@ -12,7 +12,8 @@ const Index = () => {
             className="portfolio-section lg:w-5/12 flex-1"
             style={{
               backgroundImage:
-                "url('https://aayush758.s3.us-east-1.amazonaws.com/Face_Image.png?v=1')",
+                "url('https://aayush758.s3.us-east-1.amazonaws.com/LinkedIn_profile.png?v=1')",
+              backgroundPosition: "center 15%",
             }}
           >
             <div className="portfolio-section-content">

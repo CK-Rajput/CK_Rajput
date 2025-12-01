@@ -108,7 +108,7 @@ const Projects = () => {
       technologies: ["Python", "NLP", "LangChain", "RAG", "Pinecone", "Web Scraping"],
       description:
         "Developed an advanced RAG-based Investor Chatbot using LangChain and Pinecone. Integrated web-scraped financial data to deliver accurate, grounded insights for real-world investment queries.",
-      image: "https://aayush758.s3.us-east-1.amazonaws.com/investor.png?v=1",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/investor.jpeg?v=1",
       category: "AI/ML",
     },
     {
@@ -117,7 +117,7 @@ const Projects = () => {
       technologies: ["OPENAI", "Streamlit", "Python", "Pinecone"],
       description:
         "Promoted an Automated File Retrieval System with OPENAI model for embeddings, pinecone, and Streamlit for semantic file search, optimizing the retrieval of the most relevant files.",
-      image: "https://aayush758.s3.us-east-1.amazonaws.com/Automate.png?v=1",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/Automate.jpeg?v=1",
       category: "AI/ML",
     },
   ];
