@@ -2,19 +2,17 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div
-      className="min-h-screen flex flex-col"
-      style={{ backgroundColor: "rgb(252, 245, 199)" }}
-    >
-      <div className="flex-1 overflow-hidden">
+    <div className="h-screen flex flex-col">
+      <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top row */}
-        <div className="flex flex-col lg:flex-row h-full">
+        <div className="flex-1 flex flex-col lg:flex-row">
           {/* About Me section */}
           <Link
             to="/about"
             className="portfolio-section lg:w-5/12 flex-1"
             style={{
-              backgroundImage: "url('./assets/Face_Image.png')",
+              backgroundImage:
+                "url('https://aayush758.s3.us-east-1.amazonaws.com/Face_Image.png?v=1')",
             }}
           >
             <div className="portfolio-section-content">
@@ -35,7 +33,7 @@ const Index = () => {
             to="/projects"
             className="portfolio-section lg:w-7/12 flex-1"
             style={{
-              backgroundImage: "url('./assets/Project.jpg')",
+              backgroundImage: "url('https://aayush758.s3.us-east-1.amazonaws.com/Project.jpg?v=1')",
             }}
           >
             <div className="portfolio-section-content">
@@ -51,13 +49,13 @@ const Index = () => {
         </div>
 
         {/* Bottom row */}
-        <div className="flex flex-col lg:flex-row h-full">
+        <div className="flex-1 flex flex-col lg:flex-row">
           {/* Resume section */}
           <Link
             to="/resume"
             className="portfolio-section lg:w-1/2 flex-1"
             style={{
-              backgroundImage: "url('./assets/Resume_pic.png')",
+              backgroundImage: "url('https://aayush758.s3.us-east-1.amazonaws.com/Resume_pic.png?v=1')",
             }}
           >
             <div className="portfolio-section-content">
@@ -75,7 +73,7 @@ const Index = () => {
             to="/contact"
             className="portfolio-section lg:w-1/2 flex-1"
             style={{
-              backgroundImage: "url('./assets/contact.jpg')",
+              backgroundImage: "url('https://aayush758.s3.us-east-1.amazonaws.com/contact.jpg?v=1')",
             }}
           >
             <div className="portfolio-section-content">

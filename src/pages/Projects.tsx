@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Github, Calendar } from "lucide-react";
-// import { AI_1st, second, third, fourth, fifth, sixth } from "@/assets";
+import { AI_1st } from "@/assets";
 
 const Projects = () => {
   const projects = [
@@ -18,7 +18,7 @@ const Projects = () => {
       ],
       description:
         "Innovated and devised a LangChain Q&A Chatbot using Streamlit, OpenAI GPT-3.5-turbo, RAG, enhancing user interaction and information retrieval with advanced NLP techniques.",
-      image: "./assets/AI_1st.jpg",
+      image: AI_1st,
       category: "AI/ML",
     },
     {
@@ -27,7 +27,7 @@ const Projects = () => {
       technologies: ["Python", "FastAPI", "React.js", "Git", "Linux"],
       description:
         "Overhauled a finance app using Python, FastAPI, and React.js to enhancing user experience, streamline data entry and boosting performance by 30% through form and backend optimization.",
-      image: "./assets/2nd.jpeg",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/2nd.jpeg?v=1",
       category: "Full Stack",
     },
     {
@@ -36,7 +36,7 @@ const Projects = () => {
       technologies: ["Python", "FastAPI", "YOLO", "Docker", "RTSP"],
       description:
         "Boosted real-time headcount object detection using Python, FastAPI, and YOLO, integrated with CCTV through RTSP for seamless object detection and real-time analytics deployed with Docker.",
-      image: "./assets/3rd.jpg",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/3rd.jpg?v=1",
       category: "Computer Vision",
     },
     {
@@ -45,7 +45,7 @@ const Projects = () => {
       technologies: ["Python", "Computer Vision", "Face Recognition", "AWS"],
       description:
         "Engineered an AI-powered Face Verification System for NIA, ensuring compliance with Indian data protection laws, real-time face recognition, suspect tracking, and integration with law enforcement databases.",
-      image: "./assets/4th.png",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/4th.png?v=1",
       category: "Computer Vision",
     },
     {
@@ -54,7 +54,7 @@ const Projects = () => {
       technologies: ["AI Agents", "LangChain", "LLMs", "FastAPI", "NLP"],
       description:
         "Optimized AutoQuery Pro is an AI-powered, multi-agent tool enabling non-technical users to query SQL/NoSQL databases using NLP, manufactured with AI Agents, LangChain, LLMs, and FastAPI.",
-      image: "./assets/5th.png",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/5th.png?v=1",
       category: "AI/ML",
     },
     {
@@ -63,8 +63,62 @@ const Projects = () => {
       technologies: ["Python", "SciKit-Learn", "AWS EC2", "Machine Learning"],
       description:
         "Developed and executed a machine learning model to predict water quality and potability, leveraging EC, TOC, THMs, Hardness, and Turbidity parameters, using SciKit-Learn for analysis and prediction.",
-      image: "./assets/6th.jpeg",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/6th.jpeg?v=1",
       category: "Data Science",
+    },
+    {
+      title: "LMS Support Chatbot",
+      period: "Feb 2025 – Present",
+      technologies: ["Python", "NLP", "AI", "Chatbot"],
+      description:
+        "Addressed LMS support chatbot operations by creating an AI system that automatically resolves repetitive user queries, improving response speed without manual workload.",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/LMS.png?v=1",
+      category: "AI/ML",
+    },
+    {
+      title: "Infrastructure Analytics Dashboard",
+      period: "Feb 2025 – Present",
+      technologies: ["Hadoop", "Power BI", "JSON", "APIs", "Big Data"],
+      description:
+        "Extracted JSON data from APIs, structured it in Hadoop data lake, and assembled automated Power BI dashboards for infrastructure analytics.",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/infrastructe.png?v=1",
+      category: "Data Science",
+    },
+    {
+      title: "AQI Forecasting Application",
+      period: "March 2023 – Feb 2025",
+      technologies: ["Python", "Pandas", "Streamlit", "API", "Haversine", "XGBoost"],
+      description:
+        "Designed an innovative model for precise prediction of All India AQI levels from user-provided latitude and longitude using unstructured data.",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/Air_Pollulation.jpeg?v=1",
+      category: "Data Science",
+    },
+    {
+      title: "Safety Equipment Detection",
+      period: "March 2023 – Feb 2025",
+      technologies: ["YOLOv8", "OpenCV", "RTSP", "Computer Vision", "Python", "AWS"],
+      description:
+        "Erected an advanced detection system using YOLOv8 for real-time monitoring of safety equipment within production lines.",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/cctv.jpg?v=1",
+      category: "Computer Vision",
+    },
+    {
+      title: "Investor Query Chatbot",
+      period: "Feb 2025 – Present",
+      technologies: ["Python", "NLP", "LangChain", "RAG", "Pinecone", "Web Scraping"],
+      description:
+        "Developed an advanced RAG-based Investor Chatbot using LangChain and Pinecone. Integrated web-scraped financial data to deliver accurate, grounded insights for real-world investment queries.",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/investor.png?v=1",
+      category: "AI/ML",
+    },
+    {
+      title: "Automated File Retrieval System",
+      period: "March 2023 – Feb 2025",
+      technologies: ["OPENAI", "Streamlit", "Python", "Pinecone"],
+      description:
+        "Promoted an Automated File Retrieval System with OPENAI model for embeddings, pinecone, and Streamlit for semantic file search, optimizing the retrieval of the most relevant files.",
+      image: "https://aayush758.s3.us-east-1.amazonaws.com/Automate.png?v=1",
+      category: "AI/ML",
     },
   ];
 
@@ -77,10 +131,7 @@ const Projects = () => {
   ];
 
   return (
-    <div
-      className="min-h-screen"
-      style={{ backgroundColor: "rgb(252, 245, 199)" }}
-    >
+    <div className="min-h-screen">
       {/* Header */}
       <header className="p-6 border-b border-gray-300/20">
         <Link
@@ -167,8 +218,8 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <a
-                    href="https://github.com/Chhotukumar29"
+                  {/* <a
+                    href="https://github.com/ck-rajput"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900 transition-colors text-sm"
@@ -177,14 +228,14 @@ const Projects = () => {
                     View Project
                   </a>
                   <a
-                    href="https://github.com/Chhotukumar29"
+                    href="https://github.com/ck-rajput"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 border border-gray-400 text-gray-700 rounded-md hover:bg-white/50 transition-colors text-sm"
                   >
                     <Github size={16} />
                     Code
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

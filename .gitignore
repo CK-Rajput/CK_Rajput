@@ -35,7 +35,33 @@ build/
 .next/
 out/
 
+
 # OS generated files
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# Sensitive Data & Keys
+secrets.json
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+config.json
+credentials.json
+
+# Temporary & Cache
+.cache/
+tmp/
+temp/
+coverage/
+.nyc_output/
+.eslintcache
+.stylelintcache
+
+# Debugging
+debug.log
+
+
+# Unused files
+_unused/

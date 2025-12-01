@@ -10,12 +10,9 @@ import {
 
 const About = () => {
   return (
-    <div
-      className="min-h-screen"
-      style={{ backgroundColor: "rgb(252, 245, 199)" }}
-    >
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Header */}
-      <header className="p-6 border-b border-gray-300/20">
+      <header className="p-6 border-b border-gray-300/20 bg-white/30 backdrop-blur-sm sticky top-0 z-10">
         <Link
           to="/"
           className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
@@ -47,7 +44,7 @@ const About = () => {
             </div>
             <div className="flex items-center gap-2">
               <MapPin size={18} />
-              <span>Noida, UP</span>
+              <span>New Delhi, India</span>
             </div>
           </div>
 
@@ -62,7 +59,7 @@ const About = () => {
               <LinkedinIcon size={24} />
             </a>
             <a
-              href="https://github.com/Chhotukumar29"
+              href="https://github.com/ck-rajput"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-gray-600 hover:text-gray-800 transition-colors"
@@ -73,7 +70,8 @@ const About = () => {
         </div>
 
         {/* About Content */}
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        {/* About Content - Top Row */}
+        <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
           <div className="order-2 md:order-1">
             <h2 className="font-heading text-3xl md:text-4xl text-gray-800 mb-6">
               About Me
@@ -88,7 +86,7 @@ const About = () => {
               </p>
               <p>
                 My expertise spans across Python, FastAPI, machine learning
-                frameworks like TensorFlow and PyTorch, and cloud platforms
+                frameworks like Langchain, LangGraph, AutoGen, TensorFlow and PyTorch, and cloud platforms
                 including AWS. I have successfully led teams and delivered
                 impactful projects in object detection, face recognition
                 systems, and automated analytics platforms.
@@ -107,68 +105,82 @@ const About = () => {
             {/* Personal Image */}
             <div className="mb-8">
               <img
-                src="./assets/about_me.jpg"
+                src="https://aayush758.s3.us-east-1.amazonaws.com/LinkedIn_profile.png?v=1"
                 alt="CK Rajput - AIML Engineer"
-                className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                className="w-full max-w-md mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
               />
             </div>
+          </div>
+        </div>
 
+        {/* Bottom Row - Current Role & Core Competencies */}
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div>
             <h2 className="font-heading text-3xl md:text-4xl text-gray-800 mb-6">
               Current Role
             </h2>
-            <div className="bg-white/40 backdrop-blur-sm rounded-lg p-6 shadow-sm">
+            <div className="bg-white/60 backdrop-blur-md rounded-lg p-6 shadow-sm border border-white/50">
               <h3 className="font-heading text-xl text-gray-800 mb-2">
-                AIML Engineer
+                AIML Engineer (Agentic AI & Automation)
               </h3>
               <p className="text-gray-600 mb-4">
-                MapleCloud Technologies • Feb 2025 – Present
+                MapleCloud Technologies • Feb. 2025 – Present
               </p>
               <ul className="space-y-3 font-body text-gray-700 text-sm leading-relaxed">
                 <li>
-                  • Developing real-time object detection systems using YOLO and
-                  FastAPI
+                  • Developed real-time object detection with YOLO-v8, FastAPI, and Docker for seamless CCTV analytics.
                 </li>
                 <li>
-                  • Building AI-powered tools for SQL/NoSQL database querying
-                  using NLP
+                  • Built AutoQuery Pro, a multi-agent NLP tool (AutoGen, LangChain) for querying SQL/NoSQL databases.
                 </li>
                 <li>
-                  • Engineering face verification systems for law enforcement
-                  applications
+                  • Engineered a real-time Face Verification System for NIA with suspect tracking across 60 CCTV feeds.
                 </li>
                 <li>
-                  • Creating automated chatbot solutions for enterprise support
+                  • Automated LMS support queries with AI, improving response speed and reducing manual workload.
                 </li>
                 <li>
-                  • Implementing data lake architectures with Hadoop and Power
-                  BI integration
+                  • Implemented a Hadoop data lake and Power BI dashboards with 10+ KPIs for infrastructure analytics.
+                </li>
+                <li>
+                  • Designed an NMS Power BI dashboard with 15 KPIs, resolving 90% of alerts within SLA.
                 </li>
               </ul>
             </div>
+          </div>
 
-            <div className="mt-8">
-              <h2 className="font-heading text-2xl text-gray-800 mb-4">
-                Core Competencies
-              </h2>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  "Machine Learning",
-                  "Computer Vision",
-                  "Natural Language Processing",
-                  "Deep Learning",
-                  "Python & FastAPI",
-                  "Cloud Computing (AWS)",
-                  "Data Analytics",
-                  "Team Leadership",
-                ].map((skill) => (
-                  <div
-                    key={skill}
-                    className="bg-white/30 backdrop-blur-sm rounded-md px-3 py-2 text-center text-sm font-medium text-gray-700"
-                  >
-                    {skill}
-                  </div>
-                ))}
-              </div>
+          <div>
+            <h2 className="font-heading text-2xl text-gray-800 mb-4">
+              Core Competencies
+            </h2>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                "Machine Learning",
+                "Deep Learning",
+                "Computer Vision",
+                "NLP & Transformers",
+                "Generative AI",
+                "Agentic AI",
+                "Python & R",
+                "FastAPI & Streamlit",
+                "TensorFlow & PyTorch",
+                "SQL & NoSQL",
+                "Big Data (Hadoop, Spark)",
+                "Cloud Computing (AWS)",
+                "Docker & CI/CD",
+                "Power BI & Tableau",
+                "Data Analytics",
+                "Team Leadership",
+                "LLMs (OpenAI, Gemini, Others)",
+                "MLOps (MLFlow, Git, GitHub)",
+              ].map((skill) => (
+                <div
+                  key={skill}
+                  className="bg-white/60 backdrop-blur-sm rounded-md px-3 py-2 text-center text-sm font-medium text-gray-700 border border-white/50 shadow-sm hover:shadow-md transition-all hover:bg-white/80 cursor-default"
+                >
+                  {skill}
+                </div>
+              ))}
             </div>
           </div>
         </div>

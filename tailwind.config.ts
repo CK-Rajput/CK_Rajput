@@ -64,7 +64,6 @@ export default {
         },
         // Portfolio-specific colors
         portfolio: {
-          background: "rgb(252, 245, 199)",
           text: "rgb(239, 242, 239)",
           overlay: "rgba(41, 41, 41, 0.9)",
         },

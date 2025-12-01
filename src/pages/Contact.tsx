@@ -18,6 +18,9 @@ const Contact = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -27,19 +30,37 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      // REPLACE 'YOUR_FORMSPREE_ID' WITH YOUR ACTUAL FORMSPREE FORM ID
+      // Example: https://formspree.io/f/xxyyzzww
+      const response = await fetch("https://formspree.io/f/xnnedgbj", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Error sending message. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div
-      className="min-h-screen"
-      style={{ backgroundColor: "rgb(252, 245, 199)" }}
-    >
+    <div className="min-h-screen">
       {/* Header */}
       <header className="p-6 border-b border-gray-300/20">
         <Link
@@ -101,7 +122,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-800">Location</h3>
-                  <p className="text-gray-600">Noida, UP, India</p>
+                  <p className="text-gray-600">New Delhi, India</p>
                 </div>
               </div>
             </div>
@@ -121,7 +142,7 @@ const Contact = () => {
                   <Linkedin size={20} className="text-white" />
                 </a>
                 <a
-                  href="https://github.com/Chhotukumar29"
+                  href="https://github.com/ck-rajput"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-800 hover:bg-gray-900 rounded-full flex items-center justify-center transition-colors"
@@ -236,11 +257,24 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full md:w-auto inline-flex items-center gap-2 px-8 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors font-medium"
+                disabled={isSubmitting}
+                className="w-full md:w-auto inline-flex items-center gap-2 px-8 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors font-medium disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <Send size={18} />
-                Send Message
+                {isSubmitting ? (
+                  <span>Sending...</span>
+                ) : (
+                  <>
+                    <Send size={18} />
+                    Send Message
+                  </>
+                )}
               </button>
+
+              {isSubmitted && (
+                <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-lg border border-green-200">
+                  Thank you! Your message has been sent successfully. I'll get back to you soon.
+                </div>
+              )}
             </form>
 
             <div className="mt-8 p-4 bg-gray-100/50 backdrop-blur-sm rounded-lg">
