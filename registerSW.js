@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/CK_Rajput/sw.js', { scope: '/CK_Rajput/' })})}
